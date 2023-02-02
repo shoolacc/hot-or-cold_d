@@ -13,7 +13,7 @@ input.onButtonPressed(Button.B, function () {
 })
 basic.forever(function () {
     if (input.temperature() < 18) {
-        basic.showNumber(input.temperature())
+        led.setBrightness(27)
         basic.showLeds(`
             # . # . #
             . # # # .
@@ -23,7 +23,7 @@ basic.forever(function () {
             `)
     }
     if (input.temperature() >= 18 && input.temperature() <= 24) {
-        basic.showNumber(input.temperature())
+        led.setBrightness(113)
         basic.showLeds(`
             . . . . .
             . # . # .
@@ -33,7 +33,7 @@ basic.forever(function () {
             `)
     }
     if (input.temperature() <= 24) {
-        basic.showNumber(input.temperature())
+        led.setBrightness(255)
         basic.showLeds(`
             . . . . .
             . . # . .
